@@ -8,8 +8,10 @@ const row: RowElement = {
 
 const newRowID: RowID = CRUD.insertRow(row);
 
+// Explicitly create updatedRow without using spread
 const updatedRow: RowElement = {
-  ...row,
+  firstName: row.firstName,
+  lastName: row.lastName,
   age: 23,
 };
 
