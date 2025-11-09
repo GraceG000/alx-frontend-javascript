@@ -37,6 +37,9 @@ const director1: Director = {
 
 console.log(director1);
 
+let firstName: string;
+let lastName: string;
+
 function printTeacher(firstName: string, lastName: string): string {
   return `${firstName[0]}. ${lastName}`;
 }
