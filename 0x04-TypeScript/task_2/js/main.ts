@@ -44,14 +44,14 @@ class Teacher implements TeacherInterface {
 
 // Factory function to create an employee...
 function createEmployee(salary: number | string): Director | Teacher {
-
- 
   if (typeof salary === "number" && salary < 500) {
     return new Teacher();
+  } else if (typeof salary === "string") {
+    const numericSalary = Number(salary.replace("$", ""));
+    if (numericSalary < 500) {
+      return new Teacher();
+    }
   }
-
-
   return new Director();
 }
-
 
