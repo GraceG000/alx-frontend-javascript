@@ -21,3 +21,14 @@ const teacher1: Teacher = {
 };
 
 console.log(teacher1);
+
+const director1: Directors = {
+  firstName: "Ama",
+  lastName: "Owusu",
+  fullTimeEmployee: true,
+  location: "Accra",
+  numberOfReports: 5,
+  contract: true, 
+};
+
+console.log(director1);
