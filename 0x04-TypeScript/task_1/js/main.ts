@@ -8,6 +8,10 @@ interface Teacher{
 
 }
 
+interface Directors extends Teacher {
+  numberOfReports: number;             
+}
+
 const teacher1: Teacher = {
   firstName: 'Jonathan',
   fullTimeEmployee: false,
