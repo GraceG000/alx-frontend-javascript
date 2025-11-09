@@ -44,20 +44,23 @@ function printTeacher(firstName: string, lastName: string): string {
   return `${firstName[0]}. ${lastName}`;
 }
 
-// Define an interface for the constructor
 interface StudentConstructor {
   new (firstName: string, lastName: string): StudentClassInterface;
 }
 
-// Define an interface for the class
 interface StudentClassInterface {
   workOnHomework(): string;
   displayName(): string;
 }
 
-// Implement the class
 class StudentClass implements StudentClassInterface {
-  constructor(private firstName: string, private lastName: string) {}
+  private firstName: string;
+  private lastName: string;
+
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
 
   workOnHomework(): string {
     return "Currently working";
@@ -67,4 +70,3 @@ class StudentClass implements StudentClassInterface {
     return this.firstName;
   }
 }
-
